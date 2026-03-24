@@ -8,9 +8,14 @@ import mkcert from 'vite-plugin-mkcert'
 export default defineConfig({
   plugins: [
     mkcert(),
-    react(), 
+    react(),
     tailwindcss()
   ],
+  server: {
+    headers: {
+      "Permissions-Policy": "publickey-credentials-create=*, publickey-credentials-get=*",
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
