@@ -11,11 +11,6 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
-  server: {
-    headers: {
-      "Permissions-Policy": "publickey-credentials-create=*, publickey-credentials-get=*",
-    },
-  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
